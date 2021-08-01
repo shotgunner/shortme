@@ -1,0 +1,21 @@
+server {
+    listen 80;
+
+    location ~* ^/short(.*) {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+
+        resolver 127.0.0.11 ipv6=off;
+        set $shorter_addr shorter:8000;
+        proxy_pass http://$shorter_addr/short$1$is_args$args;
+    }
+
+    location ~* ^/redirect(.*) {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+
+        resolver 127.0.0.11 ipv6=off;
+        set $redirect_addr redirector:8000;
+        proxy_pass http://$redirect_addr/redirect$1$is_args$args;
+    }
+}

@@ -1,3 +1,9 @@
 V1:
     
-    Shorter <-> db <-> Redirecter
+                Users
+                
+                Nginx
+                
+        redirector - shorter
+           
+                  db

@@ -1,13 +1,13 @@
 version: "3.4"
 
 services:
-    shorter:
-      build: "shorter"
-      restart: always
-      expose:
-        - 8000
-      environment:
-        DB_ADDRESS: "db"
-        SERVER: "production"
-      networks:
-        - v1-net
+  shorter:
+    build: "shorter"
+    restart: always
+    expose:
+      - 8000
+    environment:
+      DB_ADDRESS: "db"
+      SERVER: "production"
+    networks:
+      - v1-net

@@ -3,5 +3,6 @@ server_type=production docker-compose \
 -f ./db/docker-compose.yml \
 -f ./redirector/docker-compose.yml \
 -f ./shorter/docker-compose.yml \
+-f ./nginx/docker-compose.yml \
 "$@" \
 

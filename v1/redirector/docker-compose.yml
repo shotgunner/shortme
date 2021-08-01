@@ -1,13 +1,13 @@
 version: "3.4"
 
 services:
-    redirector:
-      build: "redirector"
-      restart: always
-      expose:
-        - 8000
-      environment:
-        DB_ADDRESS: "db"
-        SERVER: "production"
-      networks:
-        - v1-net
+  redirector:
+    build: "redirector"
+    restart: always
+    expose:
+      - 8000
+    environment:
+      DB_ADDRESS: "db"
+      SERVER: "production"
+    networks:
+      - v1-net

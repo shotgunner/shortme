@@ -6,15 +6,14 @@ api = Api(app)
 
 
 class RedirectURL(Resource):
-    def get(self):
-        request_url = request.args.get("short")
-        urls = URL.query.filter_by(short=request_url).all()
+    def get(self, short):
+        urls = URL.query.filter_by(short=short).all()
         if urls:
             return redirect(urls[0].url)
         abort(404)
 
 
-api.add_resource(RedirectURL, '/redirect')
+api.add_resource(RedirectURL, '/redirect/<short>')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
