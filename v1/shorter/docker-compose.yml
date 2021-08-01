@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+    web:
+      build: "WebApp"
+      restart: always
+      expose:
+        - 8000
+      environment:
+        DB_ADDRESS: "db"
+      networks:
+        - v1-net
