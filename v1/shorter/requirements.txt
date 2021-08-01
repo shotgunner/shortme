@@ -3,3 +3,4 @@ Flask-SQLAlchemy==2.5.1
 SQLAlchemy==1.4.22
 requests==2.26.0
 Flask-RESTful==0.3.9
+mysqlclient==2.0.3

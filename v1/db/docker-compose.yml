@@ -13,3 +13,6 @@ services:
       MYSQL_PASSWORD: pass
     networks:
       - v1-net
+
+volumes:
+  db_data:
